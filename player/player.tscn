@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://sgqmoylnilrt"]
+[gd_scene load_steps=21 format=3 uid="uid://sgqmoylnilrt"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_h4bft"]
 [ext_resource type="Texture2D" uid="uid://blc2scto57dwc" path="res://art/SpriteSheet.png" id="1_m88jv"]
@@ -138,18 +138,27 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u81mv"]
+size = Vector2(14, 5)
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_h4bft")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
-position = Vector2(101, 92)
+position = Vector2(95, 82)
 texture = ExtResource("1_m88jv")
 hframes = 4
 vframes = 7
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(71, 89)
+position = Vector2(95, 82)
 sprite_frames = SubResource("SpriteFrames_byul0")
-animation = &"moveRight"
+animation = &"moveDown"
+
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(95, 86.5)
+shape = SubResource("RectangleShape2D_u81mv")
