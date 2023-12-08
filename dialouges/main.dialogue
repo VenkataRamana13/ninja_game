@@ -1,0 +1,15 @@
+~ villager
+
+if global.villager_dial == false
+	Villager: Ah, a fresh face amidst the shadows! Heading to the sacred dojo, young ninja?
+	Ninja: Yes, I seek passage to the dojo. But I lack experience and guidance. I fear I may not be ready.
+	Villager: Every journey starts small. Seek lessons in the journey, not just the destination.
+	Ninja: How can I reach the dojo? What must I do?
+	Villager: Wisdom and training await. Seek the old monk by the cherry blossom tree. Train hard, master stealth and strength."
+	Ninja: I shall heed your advice. Thank you, kind villager.
+	Villager: May the winds guide your steps, young ninja. The journey begins not just with the feet but with the heart set on the way.
+	set global.villager_dial = true
+else
+	Villager: Go to the monk for further journey.
+	
+=> END

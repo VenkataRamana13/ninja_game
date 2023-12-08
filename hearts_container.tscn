@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://djrdsi2w35meb"]
+
+[ext_resource type="Script" path="res://hearts_container.gd" id="1_u38qb"]
+
+[node name="heartGui" type="HBoxContainer"]
+custom_minimum_size = Vector2(16, 13)
+offset_right = 16.0
+offset_bottom = 13.0
+theme_override_constants/separation = 18
+script = ExtResource("1_u38qb")

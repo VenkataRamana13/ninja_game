@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8v81a2mu5nhf"]
+
+[ext_resource type="Texture2D" uid="uid://cv2ti5dcyib1g" path="res://art/villager_intro.png" id="1_g7vrg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t33dy"]
+radius = 7.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nlcuc"]
+radius = 51.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="VillagerIntro" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = ExtResource("1_g7vrg")
+hframes = 4
+vframes = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_t33dy")
+
+[node name="villagerConvoBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="villagerConvoBox"]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_nlcuc")
